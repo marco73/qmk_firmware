@@ -23,13 +23,13 @@
 
 #define DEBOUNCE 5                              //the delay when reading the value of the pin (5 is default)
 
-#define LOCKING_SUPPORT_ENABLE                  //mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap
-#define LOCKING_RESYNC_ENABLE                   // tries to keep switch state consistent with keyboard LED state
-#define IS_COMMAND() (get_mods() == MOD_MASK_SHIFT)     //key combination that allows the use of magic commands (useful for debugging)
+//#define LOCKING_SUPPORT_ENABLE                  //mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap
+//#define LOCKING_RESYNC_ENABLE                   // tries to keep switch state consistent with keyboard LED state
+//#define IS_COMMAND() (get_mods() == MOD_MASK_SHIFT)     //key combination that allows the use of magic commands (useful for debugging)
 #define USB_MAX_POWER_CONSUMPTION 500           // sets the maximum power (in mA) over USB for the device (default: 500)
 #define USB_POLLING_INTERVAL_MS 10              // sets the USB polling rate in milliseconds for the keyboard, mouse, and shared (NKRO/media keys) interfaces
-#define USB_SUSPEND_WAKEUP_DELAY 200            // set the number of milliseconde to pause after sending a wakeup packet
-#define F_SCL 100000L                           // sets the I2C clock rate speed for keyboards using I2C. The default is 400000L, except for keyboards using split_common, where the default is 100000L.
+//#define USB_SUSPEND_WAKEUP_DELAY 200            // set the number of milliseconde to pause after sending a wakeup packet
+//#define F_SCL 100000L                           // sets the I2C clock rate speed for keyboards using I2C. The default is 400000L, except for keyboards using split_common, where the default is 100000L.
 
 // Features That Can Be Disabled
 // If you define these options you will disable the associated feature, which can save on code size.
@@ -97,11 +97,11 @@
 
 #define RGB_DI_PIN F4               // pin the DI on the WS2812 is hooked-up to
 #define RGBLIGHT_ANIMATIONS         // run RGB animations
-#define RGBLIGHT_LAYERS             // Lets you define lighting layers that can be toggled on or off. Great for showing the current keyboard layer or caps lock state.
+//#define RGBLIGHT_LAYERS             // Lets you define lighting layers that can be toggled on or off. Great for showing the current keyboard layer or caps lock state.
 //#define RGBLIGHT_MAX_LAYERS       // Defaults to 8. Can be expanded up to 32 if more lighting layers are needed.
                                     // Note: Increasing the maximum will increase the firmware size and slow sync on split keyboards.
-#define RGBLIGHT_LAYER_BLINK        // Adds ability to blink a lighting layer for a specified number of milliseconds (e.g. to acknowledge an action).
-#define RGBLIGHT_LAYERS_OVERRIDE_RGB_OFF        //If defined, then lighting layers will be shown even if RGB Light is off.
+//#define RGBLIGHT_LAYER_BLINK        // Adds ability to blink a lighting layer for a specified number of milliseconds (e.g. to acknowledge an action).
+//#define RGBLIGHT_LAYERS_OVERRIDE_RGB_OFF        //If defined, then lighting layers will be shown even if RGB Light is off.
 #define RGBLED_NUM 9                // number of LEDs
 //#define RGBLIGHT_SPLIT              // Needed if both halves of the board have RGB LEDs wired directly to the RGB output pin on the controllers instead of passing the output of the left half to the input of the right half
 //#define RGBLED_SPLIT { 6, 6 }       // number of LEDs connected that are directly wired to RGB_DI_PIN on each half of a split keyboard
