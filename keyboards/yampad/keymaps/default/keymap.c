@@ -2,7 +2,7 @@
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 2 of the License, or
+ * the Free Software Foundation, either version 2 of the License, or//////
  * (at your option) any later version.
  *
  * This program is distributed in the hope that it will be useful,
@@ -53,24 +53,23 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 
 void oled_task_user(void) {
     // Host Keyboard Layer Status
-    oled_write_P(PSTR("Layer\n"), false);
+    oled_write_P(PSTR("Layer:"), false);
 
     switch (get_highest_layer(layer_state)) {
         case _BASE:
             oled_write_P(PSTR(" Base\n"), false);
             break;
         case _RGB:
-            oled_write_P(PSTR(" RGB\n"), false);
+            oled_write_P(PSTR(" RGB \n"), false);
             break;
         default:
             // Or use the write_ln shortcut over adding '\n' to the end of your string
-            oled_write_ln_P(PSTR("Undefined"), false);
+            oled_write_ln_P(PSTR("Undef"), false);
     }
 
     // Host Keyboard LED Status
     led_t led_state = host_keyboard_led_state();
-    oled_write_P(led_state.num_lock ? PSTR("NUM ") : PSTR("    "), false);
-    oled_write_P(led_state.caps_lock ? PSTR("CAP ") : PSTR("    "), false);
-    oled_write_P(led_state.scroll_lock ? PSTR("SCR ") : PSTR("    "), false);
+    oled_write_P(led_state.num_lock ? PSTR("NUM  ") : PSTR("    "), false);
+    oled_write_P(led_state.caps_lock ? PSTR("CAP  ") : PSTR("    "), false);
 }
 #endif
