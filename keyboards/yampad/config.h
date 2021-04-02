@@ -1,10 +1,10 @@
 #include "config_common.h"
 
-#define VENDOR_ID 0x2021                        // defines your VID, and for most DIY projects, can be whatever you want
-#define PRODUCT_ID 0x524                        // defines your PID, and for most DIY projects, can be whatever you want
-//#define DEVICE_VER 1a                           // defines the device version (often used for revisions)
-#define MANUFACTURER mattdibi                   // generally who/whatever brand produced the board
-#define PRODUCT YamPad                          // the name of the keyboard
+#define VENDOR_ID     0xF00D                    // defines your VID, and for most DIY projects, can be whatever you want
+#define PRODUCT_ID    0x2021                    // defines your PID, and for most DIY projects, can be whatever you want
+#define DEVICE_VER    0x0001                    // defines the device version (often used for revisions)
+#define MANUFACTURER  mattdibi                  // generally who/whatever brand produced the board
+#define PRODUCT       YamPad                    // the name of the keyboard
 
 #define MATRIX_ROWS 5                           // the number of rows in your keyboard's matrix
 #define MATRIX_COLS 4                           // the number of columns in your keyboard's matrix
