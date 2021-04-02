@@ -46,10 +46,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #define OLED_DISPLAY_WIDTH 128
 #define OLED_DISPLAY_HEIGHT 32
 
-#    if defined(RGBLIGHT_ENABLE) || defined(RGB_MATRIX_ENABLE)
-    /* Show RGB Options */
-    render_rgb_status();
-#    endif
 
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
     if (is_keyboard_master()) {
@@ -84,11 +80,6 @@ void oled_task_user(void) {
 
     oled_write_P(PSTR("\n"), false);
 
-    void render_rgb_status(void) {
-    oled_write_ln("RGB:", false);
-    static char temp[20] = {0};
-    snprintf(temp, sizeof(temp) + 1, "M:%3dH:%3dS:%3dV:%3d", rgb_matrix_config.mode, rgb_matrix_config.hsv.h, rgb_matrix_config.hsv.s, rgb_matrix_config.hsv.v);
-    oled_write(temp, false);
 }
 }
 #endif
