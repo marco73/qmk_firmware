@@ -19,30 +19,18 @@
 
 #include "quantum.h"
 
-#define LAYOUT_base( \
-    KC_NLCK,   KC_PSLS,  KC_PAST,  KC_PMNS, \
-    KC_P7,     KC_P8,    KC_P9,    KC_PPLS,  \
-    KC_P4,     KC_P5,    KC_P6, \
-    KC_P1,     KC_P2,    KC_P3, \
-    TG(_RGB),  KC_P0,    KC_PDOT,  KC_PENT \
+#define XXX KC_NO
+#define LAYOUT( \
+    K00,  K01,  K02,  K03, \
+    K10,  K11,  K12,  K13,  \
+    K20,  K21,  K22, \
+    K30,  K31,  K32, \
+    K40,  K41,  K42,  K43 \
 ) { \
-    { KC_NLCK,  KC_PSLS,  KC_PAST,  KC_PMNS }, \
-    { KC_P7,    KC_P8,    KC_P9,    KC_PPLS }, \
-    { KC_P4,    KC_P5,    KC_P6,    KC_NO }, \
-    { KC_P1,    KC_P2,    KC_P3,    KC_NO }, \
-    {TG(_RGB),  KC_P0,    KC_PDOT,  KC_PENT },  \
+    { K00,  K01,  K02,  K03 }, \
+    { K10,  K11,  K12,  K13 }, \
+    { K20,  K21,  K22,  XXX }, \
+    { K30,  K31,  K32,  XXX }, \
+    { K40,  K41,  K42,  K43 }, \
 }
 
-#define LAYOUT_rgb( \
-    KC_NLCK,          ,   RGB_MODE_PLAIN,     RGB_MODE_REVERSE, \
-    RGB_HUD,    RGB_HUI,  RGB_MODE_BREATHE,   RGB_MODE_FORWARD,  \
-    RGB_SAD,    RGB_SAI,  RGB_MODE_SWIRL, \
-    RGB_VAD,    RGB_VAI,  RGB_MODE_SNAKE, \
-    TG(_BASE),  KC_NO,    RGB_MODE_GRADIENT,  RGB_TOG \
-) { \
-    { KC_NLCK,    KC_NO,    RGB_MODE_PLAIN,    RGB_MODE_REVERSE }, \
-    { RGB_HUD,    RGB_HUI,  RGB_MODE_BREATHE,  RGB_MODE_FORWARD }, \
-    { RGB_SAD,    RGB_SAI,  RGB_MODE_SWIRL,    KC_NO }, \
-    { RGB_VAD,    RGB_VAI,  RGB_MODE_SNAKE,    KC_NO }, \
-    { TG(_BASE),  KC_NO,    RGB_MODE_GRADIENT, RGB_TOG },  \
-}
