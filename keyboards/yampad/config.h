@@ -17,7 +17,7 @@
 //#define DIRECT_PINS { { F1, F0, B0, C7 }, { F4, F5, F6, F7 } }      //pins mapped to rows and columns, from left to right. Defines a matrix where each switch is connected to a separate pin and ground.
 
 #define BACKLIGHT_PIN F4                        // pin of the backlight
-#define BACKLIGHT_LEVELS 30                     // number of levels your backlight will have (maximum 31 excluding off)
+#define BACKLIGHT_LEVELS 15                     // number of levels your backlight will have (maximum 31 excluding off)
 //#define BACKLIGHT_BREATHING                   // enables backlight breathing
 //#define BREATHING_PERIOD 6                    // the length of one backlight "breath" in seconds
 
@@ -94,20 +94,19 @@
 //#define TAP_HOLD_CAPS_DELAY 80    // Sets the delay for Tap Hold keys (LT, MT) when using KC_CAPSLOCK keycode, as this has some special handling on MacOS.  The value is in milliseconds, and defaults to 80 ms if not defined. For macOS, you may want to set this to 200 or higher.
 
 // RGB Light Configuration
-
 #define RGB_DI_PIN F4               // pin the DI on the WS2812 is hooked-up to
 #define RGBLIGHT_ANIMATIONS         // run RGB animations
-//#define RGBLIGHT_LAYERS             // Lets you define lighting layers that can be toggled on or off. Great for showing the current keyboard layer or caps lock state.
+//#define RGBLIGHT_LAYERS           // Lets you define lighting layers that can be toggled on or off. Great for showing the current keyboard layer or caps lock state.
 //#define RGBLIGHT_MAX_LAYERS       // Defaults to 8. Can be expanded up to 32 if more lighting layers are needed.
                                     // Note: Increasing the maximum will increase the firmware size and slow sync on split keyboards.
-//#define RGBLIGHT_LAYER_BLINK        // Adds ability to blink a lighting layer for a specified number of milliseconds (e.g. to acknowledge an action).
+//#define RGBLIGHT_LAYER_BLINK      // Adds ability to blink a lighting layer for a specified number of milliseconds (e.g. to acknowledge an action).
 //#define RGBLIGHT_LAYERS_OVERRIDE_RGB_OFF        //If defined, then lighting layers will be shown even if RGB Light is off.
 #define RGBLED_NUM 9                // number of LEDs
-//#define RGBLIGHT_SPLIT              // Needed if both halves of the board have RGB LEDs wired directly to the RGB output pin on the controllers instead of passing the output of the left half to the input of the right half
-//#define RGBLED_SPLIT { 6, 6 }       // number of LEDs connected that are directly wired to RGB_DI_PIN on each half of a split keyboard
+//#define RGBLIGHT_SPLIT            // Needed if both halves of the board have RGB LEDs wired directly to the RGB output pin on the controllers instead of passing the output of the left half to the input of the right half
+//#define RGBLED_SPLIT { 6, 6 }     // number of LEDs connected that are directly wired to RGB_DI_PIN on each half of a split keyboard
                                     // First value indicates number of LEDs for left half, second value is for the right half
                                     // When RGBLED_SPLIT is defined, RGBLIGHT_SPLIT is implicitly defined.
 #define RGBLIGHT_HUE_STEP 12        // units to step when in/decreasing hue
-#define RGBLIGHT_SAT_STEP 25        // units to step when in/decreasing saturation
+#define RGBLIGHT_SAT_STEP 12        // units to step when in/decreasing saturation
 #define RGBLIGHT_VAL_STEP 12        // units to step when in/decreasing value (brightness)
-// #define RGBW                     // Enables RGBW LED support
+//#define RGBW                     // Enables RGBW LED support

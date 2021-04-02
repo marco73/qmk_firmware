@@ -28,7 +28,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_P7,    KC_P8,    KC_P9,    KC_PPLS,
     KC_P4,    KC_P5,    KC_P6,
     KC_P1,    KC_P2,    KC_P3,
-    TG(1),    KC_KP_0,  KC_PDOT,  KC_PENT
+    TO(1),    KC_KP_0,  KC_PDOT,  KC_PENT
 ),
 
   [_RGB] = LAYOUT_ortho_4x5(
@@ -36,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     RGB_HUD,  RGB_HUI,  RGB_M_B,   RGB_MOD,
     RGB_SAD,  RGB_SAI,  RGB_M_SW,
     RGB_VAD,  RGB_VAI,  RGB_M_SN,
-    TG(0),    RESET  ,  RGB_M_G,   RGB_TOG
+    TO(0),    RESET  ,  RGB_M_G,   RGB_TOG
 )
 };
 
@@ -53,14 +53,14 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 
 void oled_task_user(void) {
     // Host Keyboard Layer Status
-    oled_write_P(PSTR("Layer: "), false);
+    oled_write_P(PSTR("Layer\n"), false);
 
     switch (get_highest_layer(layer_state)) {
         case _BASE:
-            oled_write_P(PSTR("Base\n"), false);
+            oled_write_P(PSTR(" Base\n"), false);
             break;
         case _RGB:
-            oled_write_P(PSTR("RGB\n"), false);
+            oled_write_P(PSTR(" RGB\n"), false);
             break;
         default:
             // Or use the write_ln shortcut over adding '\n' to the end of your string
