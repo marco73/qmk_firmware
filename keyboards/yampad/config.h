@@ -2,7 +2,7 @@
 
 #define VENDOR_ID 0x2021                        // defines your VID, and for most DIY projects, can be whatever you want
 #define PRODUCT_ID 0x524                        // defines your PID, and for most DIY projects, can be whatever you want
-#define DEVICE_VER 0                            // defines the device version (often used for revisions)
+#define DEVICE_VER 0.5                          // defines the device version (often used for revisions)
 #define MANUFACTURER mattdibi                   // generally who/whatever brand produced the board
 #define PRODUCT YamPad                          // the name of the keyboard
 
