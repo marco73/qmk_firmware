@@ -33,7 +33,7 @@
     { KC_KP_EQUAL, KC_KP_0,      KC_KP_DOT,       KC_KP_ENTER }  \
 }
 
-#define LAYOUT_color( \
+#define LAYOUT_rgb( \
     KC_NUMLOCK,         ,  RGB_MODE_PLAIN,     RGB_MODE_REVERSE, \
     RGB_HUD,     RGB_HUI,  RGB_MODE_BREATHE,   RGB_MODE_FORWARD,  \
     RGB_SAD,     RGB_SAI,  RGB_MODE_SWIRL, \
