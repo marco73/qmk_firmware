@@ -10,7 +10,7 @@
 #define MATRIX_COLS 4                           // the number of columns in your keyboard's matrix
 #define MATRIX_ROW_PINS { C6, D7, E6, B4, B5 }  // pins of the rows, from top to bottom
 #define MATRIX_COL_PINS { B1, B3, B2, B6 }      // pins of the columns, from left to right
-#define MATRIX_IO_DELAY 30                      // the delay in microseconds when between changing matrix pin state and reading values
+//#define MATRIX_IO_DELAY 30                      // the delay in microseconds when between changing matrix pin state and reading values
 #define UNUSED_PINS { D4, F6, F5 }              // pins unused by the keyboard for reference
 //#define MATRIX_HAS_GHOST                      // define is matrix has ghost (unlikely)
 #define DIODE_DIRECTION COL2ROW                 // COL2ROW or ROW2COL - how your matrix is configured. COL2ROW means the black mark on your diode is facing to the rows, and between the switch and the rows.

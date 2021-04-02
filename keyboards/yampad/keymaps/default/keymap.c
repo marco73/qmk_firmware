@@ -23,20 +23,20 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-  [_BASE] = LAYOUT(
-    KC_NUMLOCK,  KC_KP_SLASH,  KC_KP_ASTERISK,  KC_KP_MINUS,
-    KC_P7,       KC_P8,        KC_P9,           KC_KP_PLUS,
-    KC_P4,       KC_P5,        KC_P6,           _______,
-    KC_P1,       KC_P2,        KC_P3,           _______,
-    TG(_RGB), KC_KP_0,      KC_KP_DOT,       KC_KP_ENTER
+  [_BASE] = LAYOUT_ortho_4x5(
+    KC_NLCK,  KC_PSLS,  KC_PAST,  KC_PMNS,
+    KC_P7,    KC_P8,    KC_P9,    KC_PPLS,
+    KC_P4,    KC_P5,    KC_P6,    _______,
+    KC_P1,    KC_P2,    KC_P3,    _______,
+    TG(1),    KC_KP_0,  KC_PDOT,  KC_PENT
 ),
 
-  [_RGB] = LAYOUT(
-    KC_NUMLOCK,  _______,  RGB_MODE_PLAIN,     RGB_MODE_REVERSE,
-    RGB_HUD,     RGB_HUI,  RGB_MODE_BREATHE,   RGB_MODE_FORWARD,
-    RGB_SAD,     RGB_SAI,  RGB_MODE_SWIRL,     _______,
-    RGB_VAD,     RGB_VAI,  RGB_MODE_SNAKE,     _______,
-    TG(_BASE),   _______,  RGB_MODE_GRADIENT,  RGB_TOG
+  [_RGB] = LAYOUT_ortho_4x5(
+    KC_NLCK,  _______,  RGB_M_P,   RGB_RMOD,
+    RGB_HUD,  RGB_HUI,  RGB_M_B,   RGB_MOD,
+    RGB_SAD,  RGB_SAI,  RGB_M_SW,  _______,
+    RGB_VAD,  RGB_VAI,  RGB_M_SN,  _______,
+    TG(0),    _______,  RGB_M_G,   RGB_TOG
 )
 
 };
