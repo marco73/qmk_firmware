@@ -70,9 +70,9 @@ void oled_task_user(void) {
 
     // Host Keyboard LED Status
     led_t led_state = host_keyboard_led_state();
-    oled_set_cursor(0, 4);
+    oled_set_cursor(20, 0);
     oled_write_P(led_state.num_lock ? PSTR("NUM  \b") : PSTR("    "), false);
-    oled_set_cursor(0, 20);
+    oled_set_cursor(40, 0);
     oled_write_P(led_state.caps_lock ? PSTR("CAP  \b") : PSTR("    "), false);
 }
 #endif
