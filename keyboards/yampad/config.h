@@ -2,7 +2,7 @@
 
 #define VENDOR_ID 0x2021                        // defines your VID, and for most DIY projects, can be whatever you want
 #define PRODUCT_ID 0x524                        // defines your PID, and for most DIY projects, can be whatever you want
-#define DEVICE_VER 0.5                          // defines the device version (often used for revisions)
+//#define DEVICE_VER 1a                           // defines the device version (often used for revisions)
 #define MANUFACTURER mattdibi                   // generally who/whatever brand produced the board
 #define PRODUCT YamPad                          // the name of the keyboard
 
@@ -11,7 +11,7 @@
 #define MATRIX_ROW_PINS { C6, D7, E6, B4, B5 }  // pins of the rows, from top to bottom
 #define MATRIX_COL_PINS { B1, B3, B2, B6 }      // pins of the columns, from left to right
 #define MATRIX_IO_DELAY 30                      // the delay in microseconds when between changing matrix pin state and reading values
-#define UNUSED_PINS { D1, D2, D3, B1, B2, B3 }  // pins unused by the keyboard for reference
+#define UNUSED_PINS { D4, F6, F5 }              // pins unused by the keyboard for reference
 //#define MATRIX_HAS_GHOST                      // define is matrix has ghost (unlikely)
 #define DIODE_DIRECTION COL2ROW                 // COL2ROW or ROW2COL - how your matrix is configured. COL2ROW means the black mark on your diode is facing to the rows, and between the switch and the rows.
 //#define DIRECT_PINS { { F1, F0, B0, C7 }, { F4, F5, F6, F7 } }      //pins mapped to rows and columns, from left to right. Defines a matrix where each switch is connected to a separate pin and ground.
