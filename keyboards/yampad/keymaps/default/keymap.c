@@ -57,15 +57,15 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 
 void oled_task_user(void) {
     // Host Keyboard Layer Status
-    oled_set_cursor(0, 0);
-    oled_write_P(PSTR("Layer"), false);
+    //oled_set_cursor(0, 0);
+    //oled_write_P(PSTR("Layer"), false);
 
     switch (get_highest_layer(layer_state)) {
         case _BASE:
-            oled_write_P(PSTR(" Base\n"), false);
+            oled_write_P(PSTR("     "), false);
             break;
         case _RGB:
-            oled_write_P(PSTR(" RGB \n"), false);
+            oled_write_P(PSTR(" RGB "), false);
             break;
         default:
             // Or use the write_ln shortcut over adding '\n' to the end of your string
