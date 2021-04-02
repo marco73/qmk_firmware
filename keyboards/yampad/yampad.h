@@ -24,13 +24,13 @@
     KC_P7,       KC_P8,        KC_P9,           KC_KP_PLUS,  \
     KC_P4,       KC_P5,        KC_P6, \
     KC_P1,       KC_P2,        KC_P3, \
-    KC_KP_EQUAL, KC_KP_0,      KC_KP_DOT,       KC_KP_ENTER \
+    TG(_RGB), KC_KP_0,      KC_KP_DOT,       KC_KP_ENTER \
 ) { \
     { KC_NUMLOCK,  KC_KP_SLASH,  KC_KP_ASTERISK,  KC_KP_MINUS, }, \
     { KC_P7,       KC_P8,        KC_P9,           KC_KP_PLUS, }, \
     { KC_P4,       KC_P5,        KC_P6,           KC_NO }, \
     { KC_P1,       KC_P2,        KC_P3,           KC_NO }, \
-    { KC_KP_EQUAL, KC_KP_0,      KC_KP_DOT,       KC_KP_ENTER }  \
+    {TG(_RGB), KC_KP_0,      KC_KP_DOT,       KC_KP_ENTER }  \
 }
 
 #define LAYOUT_rgb( \
@@ -38,11 +38,11 @@
     RGB_HUD,     RGB_HUI,  RGB_MODE_BREATHE,   RGB_MODE_FORWARD,  \
     RGB_SAD,     RGB_SAI,  RGB_MODE_SWIRL, \
     RGB_VAD,     RGB_VAI,  RGB_MODE_SNAKE, \
-    KC_KP_EQUAL,        ,  RGB_MODE_GRADIENT,  RGB_TOG \
+    TG(_BASE),        ,  RGB_MODE_GRADIENT,  RGB_TOG \
 ) { \
     { KC_NUMLOCK,  KC_NO,    RGB_MODE_PLAIN,    RGB_MODE_REVERSE, }, \
     { RGB_HUD,     RGB_HUI,  RGB_MODE_BREATHE,  RGB_MODE_FORWARD, }, \
     { RGB_SAD,     RGB_SAI,  RGB_MODE_SWIRL,    KC_NO }, \
     { RGB_VAD,     RGB_VAI,  RGB_MODE_SNAKE,    KC_NO }, \
-    { KC_KP_EQUAL, KC_NO,    RGB_MODE_GRADIENT, RGB_TOG }  \
+    { TG(_BASE), KC_NO,    RGB_MODE_GRADIENT, RGB_TOG }  \
 }
