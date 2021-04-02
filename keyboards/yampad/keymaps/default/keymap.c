@@ -81,5 +81,4 @@ void oled_task_user(void) {
     oled_write_P(PSTR("\n"), false);
 
 }
-}
 #endif
