@@ -36,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     RGB_HUD,  RGB_HUI,  RGB_M_B,   RGB_MOD,
     RGB_SAD,  RGB_SAI,  RGB_M_SW,
     RGB_VAD,  RGB_VAI,  RGB_M_SN,
-    TG(0),    _______,  RGB_M_G,   RGB_TOG
+    TG(0),    RESET  ,  RGB_M_G,   RGB_TOG
 )
 
 };
