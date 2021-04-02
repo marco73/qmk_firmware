@@ -65,7 +65,7 @@ void oled_task_user(void) {
             oled_write_P(PSTR("     "), false);
             break;
         case _RGB:
-            oled_write_P(PSTR(" RGB "), false);
+            oled_write_P(PSTR("RGB  "), false);
             break;
         default:
             // Or use the write_ln shortcut over adding '\n' to the end of your string
