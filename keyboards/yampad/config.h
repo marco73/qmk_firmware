@@ -106,7 +106,7 @@
 //#define RGBLED_SPLIT { 6, 6 }     // number of LEDs connected that are directly wired to RGB_DI_PIN on each half of a split keyboard
                                     // First value indicates number of LEDs for left half, second value is for the right half
                                     // When RGBLED_SPLIT is defined, RGBLIGHT_SPLIT is implicitly defined.
-#define RGBLIGHT_HUE_STEP 12        // units to step when in/decreasing hue
-#define RGBLIGHT_SAT_STEP 12        // units to step when in/decreasing saturation
-#define RGBLIGHT_VAL_STEP 12        // units to step when in/decreasing value (brightness)
-//#define RGBW                     // Enables RGBW LED support
+#define RGBLIGHT_HUE_STEP 8         // units to step when in/decreasing hue
+#define RGBLIGHT_SAT_STEP 8         // units to step when in/decreasing saturation
+#define RGBLIGHT_VAL_STEP 8         // units to step when in/decreasing value (brightness)
+//#define RGBW                      // Enables RGBW LED support
