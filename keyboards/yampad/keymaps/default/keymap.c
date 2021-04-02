@@ -42,6 +42,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 //SSD1306 OLED update loop, make sure to enable OLED_DRIVER_ENABLE=yes in rules.mk
 #ifdef OLED_DRIVER_ENABLE
+#define OLED_TIMEOUT 60000
+#define OLED_DISPLAY_WIDTH 128
+#define OLED_DISPLAY_HEIGHT 32
+
 
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
     if (is_keyboard_master()) {
@@ -67,12 +71,20 @@ void oled_task_user(void) {
             // Or use the write_ln shortcut over adding '\n' to the end of your string
             oled_write_ln_P(PSTR("Undef"), false);
     }
+    oled_write_P(PSTR(" \n"), false);
 
     // Host Keyboard LED Status
     led_t led_state = host_keyboard_led_state();
-    oled_set_cursor(20, 10);
     oled_write_P(led_state.num_lock ? PSTR("NUM  \b") : PSTR("    "), false);
-    oled_set_cursor(40, 20);
     oled_write_P(led_state.caps_lock ? PSTR("CAP  \b") : PSTR("    "), false);
+
+    oled_write_P(PSTR("\n"), false);
+
+    void render_rgb_status(void) {
+    oled_write_ln("RGB:", false);
+    static char temp[20] = {0};
+    snprintf(temp, sizeof(temp) + 1, "M:%3dH:%3dS:%3dV:%3d", rgb_matrix_config.mode, rgb_matrix_config.hsv.h, rgb_matrix_config.hsv.s, rgb_matrix_config.hsv.v);
+    oled_write(temp, false);
+}
 }
 #endif
