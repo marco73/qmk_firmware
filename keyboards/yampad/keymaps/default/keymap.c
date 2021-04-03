@@ -62,7 +62,7 @@ void oled_task_user(void) {
 
     switch (get_highest_layer(layer_state)) {
         case _BASE:
-            oled_write_P(PSTR("     "), false);
+            oled_write_P(PSTR("KEYPAD"), false);
             break;
         case _RGB:
             oled_write_P(PSTR("RGB  "), false);
@@ -75,8 +75,8 @@ void oled_task_user(void) {
 
     // Host Keyboard LED Status
     led_t led_state = host_keyboard_led_state();
-    oled_write_P(led_state.num_lock ? PSTR("NUM  ") : PSTR("     "), false);
-    oled_write_P(led_state.caps_lock ? PSTR("CAP  ") : PSTR("     "), false);
+    oled_write_P(led_state.num_lock ? PSTR("NUML ") : PSTR("     "), false);
+    oled_write_P(led_state.caps_lock ? PSTR("CAPSL") : PSTR("     "), false);
 
     oled_write_P(PSTR("\n"), false);
 
