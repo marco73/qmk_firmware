@@ -77,10 +77,10 @@ void oled_task_user(void) {
     oled_write_P(led_state.num_lock ? PSTR("NUML ") : PSTR("     "), false);
     oled_write_P(led_state.caps_lock ? PSTR("CAPSL") : PSTR("     "), false);
 
-    uint8_t chars = oled_max_chars();
-    uint8_t lines = oled_max_lines();
-    oled_write_P(chars), false);
-    oled_write_P(lines), false);
+    chars = uint8_t oled_max_chars();
+    lines = uint8_t oled_max_lines();
+    oled_write_ln(chars), false);
+    oled_write_ln(lines), false);
 
 }
 //endif
