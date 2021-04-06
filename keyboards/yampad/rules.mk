@@ -12,22 +12,22 @@ MCU = atmega32u4
 #     does not *change* the processor frequency - it should merely be updated to
 #     reflect the processor speed set externally so that the code can use accurate
 #     software delays.
-F_CPU = 16000000
+# F_CPU = 16000000
 #
 # LUFA specific
 #
 # Target architecture (see library "Board Types" documentation).
-ARCH = AVR8
+# ARCH = AVR8
 
 # Bootloader selection
 BOOTLOADER = atmel-dfu
 
 # Build Options
-#   comment out to disable the options.
+# Comment out to disable the options.
 #
-BOOTMAGIC_ENABLE = yes		# Virtual DIP switch configuration
-#MOUSEKEY_ENABLE	= no	# Mouse keys
-EXTRAKEY_ENABLE	= yes		# Audio control and System control
+BOOTMAGIC_ENABLE = no		# Virtual DIP switch configuration
+#MOUSEKEY_ENABLE = no   	# Mouse keys
+EXTRAKEY_ENABLE	= no		# Audio control and System control
 #ONSOLE_ENABLE = no			# Console for debug
 #COMMAND_ENABLE = no		# Commands for debug and configuration
 COMBO_ENABLE = no			# Key combo feature
@@ -43,4 +43,4 @@ RGBLIGHT_ENABLE = yes		# Enable keyboard underlight functionality
 #DEBOUNCE_TYPE = no			# Allows replacing the standard key debouncing routine with an alternative or custom one.
 #WAIT_FOR_USB = no			# Forces the keyboard to wait for a USB connection to be established before it starts up
 #NO_USB_STARTUP_CHECK = no	# Disables usb suspend check after keyboard startup. Usually the keyboard waits for the host to wake it up before any tasks are performed. This is useful for split keyboards as one half will not get a wakeup call but must send commands to the master.
-OLED_DRIVER_ENABLE = yes
+OLED_DRIVER_ENABLE = yes	# Enables the oled driver
